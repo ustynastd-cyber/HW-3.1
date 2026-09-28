@@ -1,53 +1,46 @@
-// 1. Temperature conversion from Celsius to Fahrenheit
-let celsius = 25;
-let fahrenheit = (celsius * 9) / 5 + 32;
-console.log('Temperature in Fahrenheit:', fahrenheit);
+const firstTextField = prompt("Введіть значення першого текстового поля:") ?? "";
+const secondTextField = prompt("Введіть значення другого текстового поля:") ?? "";
 
-// 2. Days, hours, and minutes in a month
-const daysInMonth = 31;
-const hoursInMonth = daysInMonth * 24;
-const minutesInMonth = hoursInMonth * 60;
-console.log('Hours in month:', hoursInMonth);
-console.log('Minutes in month:', minutesInMonth);
+if (firstTextField.trim() !== "" && secondTextField.trim() !== "") {
+	console.log("Обидва поля заповнені");
+} else {
+	console.log("Не всі поля заповнені");
+}
 
-// 3. Reduce player's health and energy
-let health = 100;
-let energy = 80;
-health -= 20;
-energy -= 15;
-console.log('Health after reduction:', health);
-console.log('Energy after reduction:', energy);
+const firstNumber = Number(prompt("Введіть перше число:") ?? "");
+const secondNumber = Number(prompt("Введіть друге число:") ?? "");
+const sum = firstNumber + secondNumber;
 
-// 4. Discount calculation for a purchase
-const totalPrice = 200;
-const discount = 0.1;
-const discountedPrice = totalPrice * (1 - discount);
-console.log('Discounted price:', discountedPrice);
+if (sum > 10) {
+	console.log("Сума більша за 10");
+} else {
+	console.log("Сума менша або дорівнює 10");
+}
 
-// 5. Round down a floating-point number
-const floatNumber = 12.78;
-const roundedDown = Math.floor(floatNumber);
-console.log('Rounded down:', roundedDown);
+const text = prompt("Введіть текст:") ?? "";
 
-// 6. Parse a floating-point number from a string
-const floatString = '45.67';
-const parsedFloat = parseFloat(floatString);
-console.log('Parsed float:', parsedFloat);
+if (text.includes("JavaScript")) {
+	console.log("Текст містить слово JavaScript");
+} else {
+	console.log("Текст не містить слово JavaScript");
+}
 
-// 7. Parse an integer from a string
-const intString = '123';
-const parsedInt = parseInt(intString, 10);
-console.log('Parsed integer:', parsedInt);
+const numberToCheck = Number(prompt("Введіть число для перевірки діапазону:") ?? "");
 
-// 8. Calculate square root of a number
-let number = 64;
-const sqrtNumber = Math.sqrt(number);
-console.log('Square root:', sqrtNumber);
+if (numberToCheck > 10 && numberToCheck < 20) {
+	console.log("Число входить в діапазон від 10 до 20");
+} else {
+	console.log("Число не входить в діапазон від 10 до 20");
+}
 
-// 9. Convert string to integer and integer to string
-const integer = 42;
-const stringNumber = '256';
-const convertedInt = parseInt(stringNumber, 10);
-const convertedString = integer.toString();
-console.log('Converted integer:', convertedInt);
-console.log('Converted string:', convertedString);
+const name = prompt("Введіть ім'я:") ?? "";
+const email = (prompt("Введіть email:") ?? "").trim();
+const password = prompt("Введіть пароль:") ?? "";
+const atPosition = email.indexOf("@");
+const dotPosition = email.indexOf(".", atPosition + 1);
+
+if (name.trim().length >= 3 && atPosition !== -1 && dotPosition > atPosition && password.length >= 6) {
+	console.log("Перенаправлення на іншу сторінку");
+} else {
+	console.log("Помилка: неправильне заповнення");
+}
