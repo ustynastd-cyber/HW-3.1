@@ -1,102 +1,44 @@
-const drink = prompt("Оберіть напій: Кава, Чай або Сік")?.trim();
-
-switch (drink) {
-	case "Кава":
-		console.log("Кава");
-		break;
-	case "Чай":
-		console.log("Чай");
-		break;
-	case "Сік":
-		console.log("Сік");
-		break;
-	default:
-		console.log("Невідомий варіант напою");
+// 1. Вивести в консоль всі числа від 1 до 10 за допомогою циклу while
+let i = 1;
+while (i <= 10) {
+  console.log(i);
+  i++;
 }
+console.log('---');
 
-const day = prompt("Введіть день тижня:")?.trim().toLocaleLowerCase("uk");
-
-switch (day) {
-	case "понеділок":
-	case "вівторок":
-	case "середа":
-	case "четвер":
-	case "п'ятниця":
-	case "п’ятниця":
-		console.log("Це робочий день");
-		break;
-	case "субота":
-	case "неділя":
-		console.log("Це вихідний день");
-		break;
-	default:
-		console.log("Невідомий день тижня");
+// 2. Вивести в консоль всі парні числа від 2 до 20 за допомогою циклу for
+// Пропускаємо непарні числа за допомогою continue
+for (let i = 2; i <= 20; i++) {
+  if (i % 2 !== 0) {
+    continue;
+  }
+  console.log(i);
 }
+console.log('---');
 
-const month = Number(prompt("Введіть номер місяця від 1 до 12:") ?? "");
-
-switch (month) {
-	case 12:
-	case 1:
-	case 2:
-		console.log("Зима");
-		break;
-	case 3:
-	case 4:
-	case 5:
-		console.log("Весна");
-		break;
-	case 6:
-	case 7:
-	case 8:
-		console.log("Літо");
-		break;
-	case 9:
-	case 10:
-	case 11:
-		console.log("Осінь");
-		break;
-	default:
-		console.log("Неправильний номер місяця");
+// 3. Вивести в консоль таблицю множення числа 7 за допомогою циклу for
+for (let i = 1; i <= 10; i++) {
+  console.log(`7 * ${i} = ${7 * i}`);
 }
+console.log('---');
 
-const color = prompt("Введіть колір: червоний, зелений або жовтий")?.trim().toLocaleLowerCase("uk");
-
-switch (color) {
-	case "червоний":
-		console.log("стоп");
-		break;
-	case "зелений":
-		console.log("йти");
-		break;
-	case "жовтий":
-		console.log("чекати");
-		break;
-	default:
-		console.log("Невідомий колір");
+// 4. Вивести всі числа, які менші за n, і завершити цикл за допомогою break
+const n = 15;
+for (let i = 1; i <= 100; i++) {
+  if (i >= n) {
+    break;
+  }
+  console.log(i);
 }
+console.log('---');
 
-const firstNumber = Number(prompt("Введіть перше число:") ?? "");
-const operator = prompt("Оберіть оператор: +, -, *, /")?.trim();
-const secondNumber = Number(prompt("Введіть друге число:") ?? "");
-
-switch (operator) {
-	case "+":
-		console.log(firstNumber + secondNumber);
-		break;
-	case "-":
-		console.log(firstNumber - secondNumber);
-		break;
-	case "*":
-		console.log(firstNumber * secondNumber);
-		break;
-	case "/":
-		if (secondNumber === 0) {
-			console.warn("Ділити на нуль не можна");
-		} else {
-			console.log(firstNumber / secondNumber);
-		}
-		break;
-	default:
-		console.log("Невідомий оператор");
+// 5. За допомогою циклу while вивести всі числа від 1 до 20, крім кратних 3
+let j = 1;
+while (j <= 20) {
+  if (j % 3 === 0) {
+    j++;
+    continue;
+  }
+  console.log(j);
+  j++;
 }
